@@ -1,3 +1,5 @@
+# https://weblog.west-wind.com/posts/2017/may/25/automating-iis-feature-installation-with-powershell
+
 # This script installs IIS and the features required to
 # run West Wind Web Connection.
 #
@@ -55,7 +57,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-ASPNET45
 
 # Install UrlRewrite Module for Extensionless Urls (optional)
 ###  & "C:\Program Files\Microsoft\Web Platform Installer\WebpiCmd-x64.exe" /install /Products:UrlRewrite2 /AcceptEULA /SuppressPostFinish
-choco install urlrewrite -y
+#choco install urlrewrite -y
     
 # Install WebDeploy for Deploying to IIS (optional)
 ### & "C:\Program Files\Microsoft\Web Platform Installer\WebpiCmd-x64.exe" /install /Products:WDeployNoSMO /AcceptEULA /SuppressPostFinish
