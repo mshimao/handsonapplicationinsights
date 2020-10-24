@@ -7,12 +7,8 @@ IF (-not $PathVariables.Contains( "C:\Program Files (x86)\Microsoft SQL Server\1
 write-host "SQLPackage.exe path is not found, Update the environment variable"
 $env:Path = $env:Path + ";C:\Program Files (x86)\Microsoft SQL Server\120\DAC\bin;" 
 }
-$command = $Script:SqlPackage
+$command = "sqlpackage.exe"
     
-if ([System.IO.File]::Exists($command) -ne $True) {
-    Write-Host "The sqlpackage.exe is not present on the system. This is an important part of making the bacpac file. Please install latest SQL Server Management Studio on the machine and run the cmdlet again. `r`nVisit this link:`r`ndocs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms" -ForegroundColor Yellow
-    Write-Error "The sqlpackage.exe is missing on the system." -ErrorAction Stop
-}
 
 $DatabaseServer = ".\SQLEXPRESS2014"
 $DatabaseName = "demoappinsights"
