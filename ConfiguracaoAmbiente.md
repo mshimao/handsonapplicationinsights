@@ -69,6 +69,11 @@ O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a se
 
         choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014  /SECURITYMODE:SQL /SAPWD:sa!2014"'
 
+Após a instalação, para verificar se a instalação do SQL está rodando, abra o SQL Server Management Studio e conecte no SQL Express.
+
+Importar a base de dados para o SQL Server.
+
+        .\
 
 
 
