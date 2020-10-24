@@ -71,6 +71,16 @@ O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a se
 
 Após a instalação, para verificar se a instalação do SQL está rodando, abra o SQL Server Management Studio e conecte no SQL Express.
 
+Instalar o modulo Powershell de administracao do SQL Server.
+
+        Install-Module -Name SqlServer
+
+Reponder "A" para a pergunta "If you trust this repository, change its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to nstall the modules from 'PSGallery'?"
+
+Habilitar o TCP/IP no SQL Server.
+
+        .\settcpipsql.ps1
+
 Importar a base de dados para o SQL Server.
 
         .\import-bacpac.ps1
