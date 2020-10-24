@@ -73,7 +73,13 @@ Após a instalação, para verificar se a instalação do SQL está rodando, abr
 
 Importar a base de dados para o SQL Server.
 
-        .\
+        .\import-bacpac.ps1
+
+Instalar a aplicação demo no IIS.
+
+        .\installapp.ps1
+
+
 
 
 
