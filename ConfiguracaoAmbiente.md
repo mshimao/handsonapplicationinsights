@@ -87,6 +87,10 @@ Instalar a aplicação demo no IIS.
 
         .\installapp.ps1
 
+Configurar as variáveis de ambiente para conexão com o banco de dados.
+
+        .\setvariables.ps1
+
 
 
 
