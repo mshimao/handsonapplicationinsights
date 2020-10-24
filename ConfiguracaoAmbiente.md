@@ -75,6 +75,14 @@ Importar a base de dados para o SQL Server.
 
         .\import-bacpac.ps1
 
+Instalar o modulo de administracao do IIS 
+
+        Install-Module –Name IISAdministration
+
+Responder "Y" para a pergunta "Do you want PowerShellGet to install and import the NuGet provider now?"
+
+Reponder "A" para a pergunta "If you trust this repository, change its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to nstall the modules from 'PSGallery'?"
+
 Instalar a aplicação demo no IIS.
 
         .\installapp.ps1
