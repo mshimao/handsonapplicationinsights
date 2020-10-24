@@ -61,7 +61,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-ASPNET45
     
 # Install WebDeploy for Deploying to IIS (optional)
 ### & "C:\Program Files\Microsoft\Web Platform Installer\WebpiCmd-x64.exe" /install /Products:WDeployNoSMO /AcceptEULA /SuppressPostFinish
-choco install webdeploy -y
+# choco install webdeploy -y
 
 # Disable Loopback Check on a Server - to get around no local Logins on Windows Server
 # New-ItemProperty HKLM:\System\CurrentControlSet\Control\Lsa -Name "DisableLoopbackCheck" -Value "1" -PropertyType dword
