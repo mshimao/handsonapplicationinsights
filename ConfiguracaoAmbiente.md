@@ -65,12 +65,10 @@ Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
 
 Instalar o SQL Express 2014 
 
-O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a senha "sa!2014".
+O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a senha "sa!2014". Este pacote já inclui o SQL Server Management Studio.
 
-        choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014  /SECURITYMODE=SQL /SAPWD:sa!2014"'
+        choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014  /SECURITYMODE:SQL /SAPWD:sa!2014"'
 
-Instalar o SQL Server Management Studio
 
-        choco install sql-server-management-studio
 
 
