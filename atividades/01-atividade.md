@@ -66,20 +66,45 @@ Responder a pergunta "Do you want to run the script?" com "A".
 
 ![Instalação do VS Code](../imagens/installvisualcode.png)
 
-
+#### Clonar o repositório do hands-on
 
 Abrir o Visual Code como administrador.
 
+![VSCode](../imagens/abrirvscode.png)
+
 Criar uma pasta com o nome de "Handson" no drive C.
 
-Clonar o projeto do Github nesta pasta:
+![Pastahandson](../imagens/pastahandson.png)
 
-https://github.com/mshimao/handsonapplicationinsights.git
+Para clonar o projeto do Github nesta pasta, clicar na opção View ->  Command Palete.
 
+![commandpalette](../imagens/commandpalette.png)
 
-Configuração do IIS
+Na box de comandos, selecionar a opção Git:Clone.
 
-Abrir um terminal, usando a opção Terminal -> New Terminal.
+![gitclone](../imagens/gitclone.png)
+
+Informar a url https://github.com/mshimao/handsonapplicationinsights.git na url do comando git clone.
+
+![giturl](../imagens/gitclone2.png)
+
+Selecionar a pasta C:\handson como destino.
+
+![repodir](../imagens/selecaodapasta.png)
+
+Após a execução do clone, abrir o repositório, clicando em Open.
+
+![confirm](../imagens/openclonedrepo.png)
+
+O Visual Code abrirá posicionado na pasta C:\Handson\handsonapplicationinsights.
+
+![localrepo](../imagens/repolocal.png)
+
+### Configuração do IIS
+
+Para configurar o IIS vamos executar um script powershell, para isso vamos usar o terminal do Visual Code, para abrir um terminal, clique na opção Terminal -> New Terminal.
+
+![newterminal](../imagens/newterminal.png)
 
 Na janela do teminal, ir para a pasta powershell:
 
@@ -91,38 +116,51 @@ Executar o script installiis.ps1
 
 Se ocorrer o erro abaixo, feche o Visual Code, e reabra ele executando como administrador e reexecute o script.
 
+![errovs](../imagens/errofaltadedireitos.png)
+
 Responder "N" para as perguntas "Do you want to restart the computer to complete this operation now?".
 
-Após a instalação, reiniciar a VM.
+![restart](../imagens/respostarestart.png)
 
-Abrir o Visual Code como administrador na pasta C:\Handson\handsonapplicationinsights e abrir um terminal.
+Após a instalação, reiniciar a VM, para que Windows complete a configuração do IIS.
+
+### Urlrewrite
+
+Abrir o Visual Code como administrador na pasta C:\Handson\handsonapplicationinsights e abrir um terminal, e executar o comando abaixo:
 
         choco install urlrewrite -y
 
+### Chrome
 
-Instalar o Chrome
+Para instalar o Chrome, executar o comando no terminal powershell do Visual Code.
 
         choco install googlechrome
 
 Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
 
-Instalar o SQL Express 2014 
+### SQL Express 2014
 
-O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a senha "sa!2014". Este pacote já inclui o SQL Server Management Studio.
+Para instalar o SQL Express 2014, executar o comando abaixo no terminal powershell do Visual Code. O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a senha "sa!2014". Este pacote já inclui o SQL Server Management Studio.
 
         choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014  /SECURITYMODE:SQL /SAPWD:sa!2014"'
 
 Após a instalação, para verificar se a instalação do SQL está rodando, abra o SQL Server Management Studio e conecte no SQL Express.
 
-Iniciar o serviço SQL Browser.
+Para que a aplicação consiga conectar no SQL é necessário iniciar o serviço SQL Browser, para isso, ir para a pasta powershell do repositório e executar o script startsqlbrowser.ps1:
+
+        cd powershell
 
         .\startsqlbrowser.ps1
+
+### Restaurar a base de dados
 
 Importar a base de dados para o SQL Server.
 
         .\import-bacpac.ps1
 
-Instalar o modulo de administracao do IIS 
+### Instalação da aplicação
+
+Instalar o modulo de administracao do IIS.
 
         Install-Module –Name IISAdministration
 
@@ -141,10 +179,3 @@ Configurar as variáveis de ambiente para conexão com o banco de dados.
 Configurar o web.config com os dados para conexão com o banco de dados.
 
         .\setwebconfig.ps1
-
-
-
-
-
-
-
