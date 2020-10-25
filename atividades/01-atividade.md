@@ -10,7 +10,7 @@ Para este hands-on utilizaremos uma VM para instalar a aplicação e o agente de
 
 No link abaixo estão disponíveis VMs em HyperV, VirtualBox e VMware.
 
-https://developer.microsoft.com/pt-br/microsoft-edge/tools/vms/
+<https://developer.microsoft.com/pt-br/microsoft-edge/tools/vms/>
 
 Selecione a opção com o Windows 10, a plataforma de VM escolha o tipo que tiver mais familiaridade.
 
@@ -19,10 +19,10 @@ Selecione a opção com o Windows 10, a plataforma de VM escolha o tipo que tive
 Se você não tem nenhum gerenciador de VM instalado na sua máquina, utilize o VirtualBox:
 
 VirtualBox - Instalação do VirtualBox
-https://www.youtube.com/watch?v=8mns5yqMfZk
+<https://www.youtube.com/watch?v=8mns5yqMfZk>
 
 VirtualBox - Como importar um vdi.
-https://www.youtube.com/watch?v=fVYwt1Tluug
+<https://www.youtube.com/watch?v=fVYwt1Tluug>
 
 Após o download da VM e da sua configuração, inicie ela e logue no Windows.
 
@@ -36,7 +36,7 @@ Para instalar o Chocolatey, será necessário executar powershell como administr
 
 Acessar o link abaixo para ver as instruções de instalação do Chocolatey:
 
-https://chocolatey.org/install
+<https://chocolatey.org/install>
 
 ![Install chocolatey](../imagens/installchocolatey.png)
 
@@ -84,7 +84,7 @@ Na box de comandos, selecionar a opção Git:Clone.
 
 ![gitclone](../imagens/gitclone.png)
 
-Informar a url https://github.com/mshimao/handsonapplicationinsights.git na url do comando git clone.
+Informar a url <https://github.com/mshimao/handsonapplicationinsights.git> na url do comando git clone.
 
 ![giturl](../imagens/gitclone2.png)
 
@@ -122,7 +122,11 @@ Responder "N" para as perguntas "Do you want to restart the computer to complete
 
 ![restart](../imagens/respostarestart.png)
 
-Após a instalação, reiniciar a VM, para que Windows complete a configuração do IIS.
+Após a instalação, reiniciar o Windows da VM, para que Windows complete a configuração do IIS.
+
+![restartwindows](../imagens/reiniciarwindows.png)
+
+Após o restart do Windows, abrir novamente a VM.
 
 ### Urlrewrite
 
@@ -144,7 +148,9 @@ Para instalar o SQL Express 2014, executar o comando abaixo no terminal powershe
 
         choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014  /SECURITYMODE:SQL /SAPWD:sa!2014"'
 
-Após a instalação, para verificar se a instalação do SQL está rodando, abra o SQL Server Management Studio e conecte no SQL Express.
+Após a instalação, para verificar se a instalação do SQL está rodando, abra o SQL Server Management Studio e conecte no SQL Express, usando o usuário "sa" e senha "sa!2014".
+
+![connectsql](../imagens/connectsql.png)
 
 Para que a aplicação consiga conectar no SQL é necessário iniciar o serviço SQL Browser, para isso, ir para a pasta powershell do repositório e executar o script startsqlbrowser.ps1:
 
@@ -152,15 +158,23 @@ Para que a aplicação consiga conectar no SQL é necessário iniciar o serviço
 
         .\startsqlbrowser.ps1
 
+Após a execução do script, abrir o SQL Server Configuration Manager e verificar se o SQL Server Browser está rodando.
+
+![sqlbrowser](../imagens/startsqlbrowser.png)
+
 ### Restaurar a base de dados
 
-Importar a base de dados para o SQL Server.
+Para importar a base de dados para o SQL Server, se posicione na pasta powershell e execute o script import-bacpac.ps1.
 
         .\import-bacpac.ps1
 
+Após a execução do script abra o SQL Server Management Studio e conecte no SQL para verificar se o banco de dados "demoappinsights" foi restaurado.
+
+![basededados](../imagens/basededados.png)
+
 ### Instalação da aplicação
 
-Instalar o modulo de administracao do IIS.
+Para configurar a aplicação vamos precisar usar o módulo powershell de administração do IIS, para isso, executar o comando abaixo no terminal.
 
         Install-Module –Name IISAdministration
 
@@ -168,14 +182,18 @@ Responder "Y" para a pergunta "Do you want PowerShellGet to install and import t
 
 Reponder "A" para a pergunta "If you trust this repository, change its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to nstall the modules from 'PSGallery'?"
 
-Instalar a aplicação demo no IIS.
+Para criar a aplicação no IIS, vá até a pasta powershell e execute o comando installapp.ps1.
 
         .\installapp.ps1
 
-Configurar as variáveis de ambiente para conexão com o banco de dados.
+Após a execução do script abra o IIS Manager para verificar se a aplicação foi criada, a aplicação será instalada na pasta C:\inetpub\wwwroot\demoappinsights.
 
-        .\setvariables.ps1
+![appiis](../imagens/appnoiis.png)
 
-Configurar o web.config com os dados para conexão com o banco de dados.
+Configurar o web.config com os dados para conexão com o banco de dados, no terminal, vá até a pasta powershell e execute o comando .\setwebconfig.ps1.
 
         .\setwebconfig.ps1
+
+Abra o web.config para verificar se as configurações de conexão foram atualizadas.
+
+![webconfig](../imagens/webconfig.png)
