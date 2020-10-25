@@ -1,13 +1,22 @@
 # Atividade 01
 
-Criação da máquina virtual com SQL Server e configuração da aplicação.
+Download da máquina virtual e configuração do IIS, instalação do SQL Server e instalação da aplicação.
 
-## Criação da VM
+## Configuração da VM
 
 Para este hands-on utilizaremos uma VM para instalar a aplicação e o agente de monitoramento.
 
-No link abaixo está disponível VMs em HyperV, VirtualBox e VMware, escolha o tipo que tiver mais familiaridade:
+### Download da VM
+
+No link abaixo estão disponíveis VMs em HyperV, VirtualBox e VMware.
+
 https://developer.microsoft.com/pt-br/microsoft-edge/tools/vms/
+
+Selecione a opção com o Windows 10, a plataforma de VM escolha o tipo que tiver mais familiaridade.
+
+![Download VM](../imagens/downloadvm.png)
+
+Se você não tem nenhum gerenciador de VM instalado na sua máquina, utilize o VirtualBox:
 
 VirtualBox - Instalação do VirtualBox
 https://www.youtube.com/watch?v=8mns5yqMfZk
@@ -15,21 +24,49 @@ https://www.youtube.com/watch?v=8mns5yqMfZk
 VirtualBox - Como importar um vdi.
 https://www.youtube.com/watch?v=fVYwt1Tluug
 
+Após o download da VM e da sua configuração, inicie ela e logue no Windows.
 
-Instalar o Chocolatey seguindo as instruções do link abaixo:
+### Chocolatey
+
+Para facilitar a configuração da VM vamos utilizar o gerenciador de pacotes Chocolatey.
+
+Para instalar o Chocolatey, será necessário executar powershell como administrador. No box de pesquisa do Windows, digitar powershell, e clicar com o botão direito do mouse no ícone do Powershell e clicar na opção Executar como administrador.
+
+![Powershell](../imagens/powershelladm.png)
+
+Acessar o link abaixo para ver as instruções de instalação do Chocolatey:
+
 https://chocolatey.org/install
 
-Instalar o git utilizando o Chocolatey:
+![Install chocolatey](../imagens/installchocolatey.png)
+
+![Install chocolatey](../imagens/installchocolatey2.png)
+
+### Instalação dos softwares
+
+Após a instalação do Chocolatey, vamos utilizá-lo para instalar os outros softwares que utilizaremos neste hands-on. Para isso abra o Powershell como administrador.
+
+#### Git
+
+Para instalar o Git utilizando o Chocolatey, digite o comando abaixo no prompt do Powershell:
 
         choco install git
 
 Responder a pergunta "Do you want to run the script?" com "A".
 
-Instalar o Visual Code utilizando o Chocolatey:
+![Instalação do git](../imagens/installgit.png)
+
+#### Visual Code
+
+Para instalar o Visual Code utilizando o Chocolatey, digite o comando abaixo no prompt do Powershell:
 
         choco install vscode
 
 Responder a pergunta "Do you want to run the script?" com "A".
+
+![Instalação do VS Code](../imagens/installvisualcode.png)
+
+
 
 Abrir o Visual Code como administrador.
 
