@@ -95,6 +95,12 @@ Configurar as variáveis de ambiente para conexão com o banco de dados.
 
         .\setvariables.ps1
 
+Configurar o web.config com os dados para conexão com o banco de dados.
+
+        .\setwebconfig.ps1
+
+
+
 
 
 
