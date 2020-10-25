@@ -1,3 +1,9 @@
+# Atividade 01
+
+Criação da máquina virtual com SQL Server e configuração da aplicação.
+
+## Criação da VM
+
 Para este hands-on utilizaremos uma VM para instalar a aplicação e o agente de monitoramento.
 
 No link abaixo está disponível VMs em HyperV, VirtualBox e VMware, escolha o tipo que tiver mais familiaridade:
