@@ -21,10 +21,12 @@ Se você não tem nenhum gerenciador de VM instalado na sua máquina, utilize o 
 VirtualBox - Instalação do VirtualBox
 <https://www.youtube.com/watch?v=8mns5yqMfZk>
 
-VirtualBox - Como importar um vdi.
-<https://www.youtube.com/watch?v=fVYwt1Tluug>
+VirtualBox - Como importar o ova.
+<https://www.youtube.com/watch?v=93lM4OLyytE>
 
-Após o download da VM e da sua configuração, inicie ela e logue no Windows.
+Configurar a VM com 4GB de RAM e 2 processadores, se possível coloque 8 GB.
+
+Após a configuração, inicie a VM e logue no Windows, a senha do usuário é "Passw0rd!".
 
 ### Chocolatey
 
@@ -197,3 +199,7 @@ Configurar o web.config com os dados para conexão com o banco de dados, no term
 Abra o web.config para verificar se as configurações de conexão foram atualizadas.
 
 ![webconfig](../imagens/webconfig.png)
+
+Abrir a aplicação no Chrome acessando a url:
+
+<http://localhost/demoappinsights/home.aspx>
