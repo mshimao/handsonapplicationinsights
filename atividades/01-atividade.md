@@ -148,7 +148,7 @@ Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
 
 Para instalar o SQL Express 2014, executar o comando abaixo no terminal powershell do Visual Code. O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a senha "sa!2014". Este pacote já inclui o SQL Server Management Studio.
 
-        choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014  /SECURITYMODE:SQL /SAPWD:sa!2014"'
+        choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014 /SECURITYMODE:SQL /SAPWD:sa!2014"'
 
 Após a instalação, para verificar se a instalação do SQL está rodando, abra o SQL Server Management Studio e conecte no SQL Express, usando o usuário "sa" e senha "sa!2014".
 
