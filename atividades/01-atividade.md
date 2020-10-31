@@ -168,6 +168,8 @@ Para que a aplicação consiga conectar no SQL é necessário iniciar o serviço
 
         .\startsqlbrowser.ps1
 
+![executestartsqlbrowser](../imagens/executestartsqlbrowser.png)
+
 Após a execução do script, abrir o SQL Server Configuration Manager e verificar se o SQL Server Browser está rodando.
 
 ![sqlbrowser](../imagens/startsqlbrowser.png)
@@ -177,6 +179,8 @@ Após a execução do script, abrir o SQL Server Configuration Manager e verific
 Para importar a base de dados para o SQL Server, se posicione na pasta powershell e execute o script import-bacpac.ps1.
 
         .\import-bacpac.ps1
+
+![executeimportbacpac](../imagens/executeimportbacpac.png)
 
 Após a execução do script abra o SQL Server Management Studio e conecte no SQL para verificar se o banco de dados "demoappinsights" foi restaurado.
 
@@ -192,9 +196,13 @@ Responder "Y" para a pergunta "Do you want PowerShellGet to install and import t
 
 Reponder "A" para a pergunta "If you trust this repository, change its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to nstall the modules from 'PSGallery'?"
 
+![basededados](../imagens/installIISAdmin.png)
+
 Para criar a aplicação no IIS, vá até a pasta powershell e execute o comando installapp.ps1.
 
         .\installapp.ps1
+
+![installapp](../imagens/installapp.png)
 
 Após a execução do script abra o IIS Manager para verificar se a aplicação foi criada, a aplicação será instalada na pasta C:\inetpub\wwwroot\demoappinsights.
 
@@ -204,6 +212,8 @@ Configurar o web.config com os dados para conexão com o banco de dados, no term
 
         .\setwebconfig.ps1
 
+![setwebconfig](../imagens/setwebconfig.png)
+
 Abra o web.config para verificar se as configurações de conexão foram atualizadas.
 
 ![webconfig](../imagens/webconfig.png)
@@ -211,3 +221,5 @@ Abra o web.config para verificar se as configurações de conexão foram atualiz
 Abrir a aplicação no Chrome acessando a url:
 
 <http://localhost/demoappinsights/home.aspx>
+
+![openapp](../imagens/openapp.png)
