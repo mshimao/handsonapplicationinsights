@@ -4,6 +4,9 @@ Criação do recurso do Application Insights.
 
 ## Criação da recurso do Application Insights
 
+Documentação da Microsoft sobre a criação do recurso do Application Insights.
+<https://docs.microsoft.com/pt-br/azure/azure-monitor/app/create-workspace-resource>
+
 Logar no portal do Azure, no endereço <https://portal.azure.com/>.
 
 Criar um Resource group chamado "HandsonApplicationInsights", para isso acessar clicar no menu superior na esquerda. Clicar na opção "Resource groups".

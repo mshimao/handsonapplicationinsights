@@ -52,7 +52,7 @@ Após a instalação do Chocolatey, vamos utilizá-lo para instalar os outros so
 
 Para instalar o Git utilizando o Chocolatey, digite o comando abaixo no prompt do Powershell:
 
-        choco install git
+    choco install git
 
 Responder a pergunta "Do you want to run the script?" com "A".
 
@@ -62,7 +62,7 @@ Responder a pergunta "Do you want to run the script?" com "A".
 
 Para instalar o Visual Code utilizando o Chocolatey, digite o comando abaixo no prompt do Powershell:
 
-        choco install vscode
+    choco install vscode
 
 Responder a pergunta "Do you want to run the script?" com "A".
 
@@ -110,11 +110,11 @@ Para configurar o IIS vamos executar um script powershell, para isso vamos usar 
 
 Na janela do teminal, ir para a pasta powershell:
 
-        cd powershell
+    cd powershell
 
 Executar o script installiis.ps1
 
-        .\installiis.ps1
+    .\installiis.ps1
 
 Se ocorrer o erro abaixo, feche o Visual Code, e reabra ele executando como administrador e reexecute o script.
 
@@ -134,7 +134,7 @@ Após o restart do Windows, abrir novamente a VM.
 
 Abrir o Visual Code como administrador na pasta C:\Handson\handsonapplicationinsights e abrir um terminal, e executar o comando abaixo:
 
-        choco install urlrewrite -y
+    choco install urlrewrite -y
 
 ![installurlrewrite](../imagens/installurlrewrite.png)
 
@@ -142,17 +142,23 @@ Abrir o Visual Code como administrador na pasta C:\Handson\handsonapplicationins
 
 Para instalar o Chrome, executar o comando no terminal powershell do Visual Code.
 
-        choco install googlechrome
+    choco install googlechrome
 
 Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
 
 ![installchrome](../imagens/installchrome.png)
 
+Instalar o CURL, executar o comando no terminal powershell do Visual Code.
+
+    choco install curl
+
+Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
+
 ### SQL Express 2014
 
 Para instalar o SQL Express 2014, executar o comando abaixo no terminal powershell do Visual Code. O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a senha "sa!2014". Este pacote já inclui o SQL Server Management Studio.
 
-        choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014 /SECURITYMODE:SQL /SAPWD:sa!2014"'
+    choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014 /SECURITYMODE:SQL /SAPWD:sa!2014"'
 
 Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
 
@@ -164,9 +170,9 @@ Após a instalação, para verificar se a instalação do SQL está rodando, abr
 
 Para que a aplicação consiga conectar no SQL é necessário iniciar o serviço SQL Browser, para isso, ir para a pasta powershell do repositório e executar o script startsqlbrowser.ps1:
 
-        cd powershell
+    cd powershell
 
-        .\startsqlbrowser.ps1
+    .\startsqlbrowser.ps1
 
 ![executestartsqlbrowser](../imagens/executestartsqlbrowser.png)
 
@@ -178,7 +184,7 @@ Após a execução do script, abrir o SQL Server Configuration Manager e verific
 
 Para importar a base de dados para o SQL Server, se posicione na pasta powershell e execute o script import-bacpac.ps1.
 
-        .\import-bacpac.ps1
+    .\import-bacpac.ps1
 
 ![executeimportbacpac](../imagens/executeimportbacpac.png)
 
@@ -190,7 +196,7 @@ Após a execução do script abra o SQL Server Management Studio e conecte no SQ
 
 Para configurar a aplicação vamos precisar usar o módulo powershell de administração do IIS, para isso, executar o comando abaixo no terminal.
 
-        Install-Module –Name IISAdministration
+    Install-Module –Name IISAdministration
 
 Responder "Y" para a pergunta "Do you want PowerShellGet to install and import the NuGet provider now?"
 
@@ -200,7 +206,7 @@ Reponder "A" para a pergunta "If you trust this repository, change its Installat
 
 Para criar a aplicação no IIS, vá até a pasta powershell e execute o comando installapp.ps1.
 
-        .\installapp.ps1
+    .\installapp.ps1
 
 ![installapp](../imagens/installapp.png)
 
@@ -210,7 +216,7 @@ Após a execução do script abra o IIS Manager para verificar se a aplicação 
 
 Configurar o web.config com os dados para conexão com o banco de dados, no terminal, vá até a pasta powershell e execute o comando .\setwebconfig.ps1.
 
-        .\setwebconfig.ps1
+    .\setwebconfig.ps1
 
 ![setwebconfig](../imagens/setwebconfig.png)
 
