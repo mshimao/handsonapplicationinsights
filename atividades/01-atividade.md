@@ -136,6 +136,8 @@ Abrir o Visual Code como administrador na pasta C:\Handson\handsonapplicationins
 
         choco install urlrewrite -y
 
+![installurlrewrite](../imagens/installurlrewrite.png)
+
 ### Chrome
 
 Para instalar o Chrome, executar o comando no terminal powershell do Visual Code.
@@ -144,11 +146,17 @@ Para instalar o Chrome, executar o comando no terminal powershell do Visual Code
 
 Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
 
+![installchrome](../imagens/installchrome.png)
+
 ### SQL Express 2014
 
 Para instalar o SQL Express 2014, executar o comando abaixo no terminal powershell do Visual Code. O comando abaixo instala o SQL Express 2014 e configura o usuário "sa" com a senha "sa!2014". Este pacote já inclui o SQL Server Management Studio.
 
         choco install mssqlexpress2014sp1wt -params '"/INSTANCEID:SQLEXPRESS /INSTANCENAME:SQLEXPRESS2014 /SECURITYMODE:SQL /SAPWD:sa!2014"'
+
+Reponder a pergunta "Do you want to run the script?([Y]es/[A]ll" com "A".
+
+![installsql](../imagens/installsql.png)
 
 Após a instalação, para verificar se a instalação do SQL está rodando, abra o SQL Server Management Studio e conecte no SQL Express, usando o usuário "sa" e senha "sa!2014".
 

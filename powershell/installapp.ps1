@@ -12,3 +12,5 @@ New-Item -ItemType Directory -Force -Path $physicalPath
 Expand-Archive -LiteralPath $package -DestinationPath $physicalPath
 
 New-WebApplication -Name $appName -Site $siteName  -PhysicalPath $physicalPath -ApplicationPool $siteAppPool 
+
+Write-Host "App installed."

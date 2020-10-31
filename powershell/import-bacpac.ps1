@@ -18,3 +18,4 @@ $SqlPwd = "sa!2014"
 $param = "/a:import /tsn:$DatabaseServer /tdn:$DatabaseName /sf:$BacPacfile /tu:$SqlUser /tp:$SqlPwd /p:CommandTimeout=1200"
 
 Start-Process -FilePath $command -ArgumentList  $param  -NoNewWindow -Wait
+Write-Host "Database installed."
