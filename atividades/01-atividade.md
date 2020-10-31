@@ -223,3 +223,5 @@ Abrir a aplicação no Chrome acessando a url:
 <http://localhost/demoappinsights/home.aspx>
 
 ![openapp](../imagens/openapp.png)
+
+Próxima atividade: [Atividade 02](02-atividade.md)
