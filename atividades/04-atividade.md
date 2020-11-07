@@ -45,7 +45,7 @@ Adicionar as tags abaixo na seção "system.web".
 
 ![httpmodules](../imagens/httpmodules.png)
 
-Adicionar as tags abaixo na seção "system.webServer".
+Adicionar as tags abaixo na tag "modules" na seção "system.webServer".
 
     <remove name="TelemetryCorrelationHttpModule" />
     <add name="TelemetryCorrelationHttpModule" type="Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule, Microsoft.AspNet.TelemetryCorrelation" preCondition="managedHandler" />
